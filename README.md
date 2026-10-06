@@ -1,56 +1,154 @@
-# Welcome to your Expo app 👋
+# 🍕 Sabor da Gente
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicativo mobile de uma pizzaria desenvolvido em **React Native + Expo + TypeScript** como projeto da disciplina de **Programação para Dispositivos Móveis (PDM)**.
 
-## Get started
+O objetivo do projeto é desenvolver uma aplicação completa para pedidos de uma pizzaria, permitindo que clientes consultem o cardápio, montem seus pedidos, realizem a compra e acompanhem o pedido.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 🎯 Objetivo do projeto
 
-2. Start the app
+Desenvolver um sistema de pizzaria com:
 
-   ```bash
-   npx expo start
-   ```
+- 📱 Aplicativo mobile para clientes;
+- 🍕 Cardápio digital;
+- 🛒 Carrinho de compras;
+- 📦 Sistema de pedidos;
+- 👤 Cadastro e gerenciamento de clientes;
+- 💳 Formas de pagamento;
+- 📍 Endereços de entrega;
+- 👨‍💼 Área administrativa;
+- 🗄️ Banco de dados;
+- 🧱 Aplicação de Programação Orientada a Objetos (POO).
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 🛠️ Tecnologias
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- React Native
+- Expo
+- Expo Router
+- TypeScript
+- Node.js
+- Git
+- GitHub
+- Banco de dados (a definir)
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## ✅ Funcionalidades implementadas
 
-```bash
-npm run reset-project
-```
+### 🏠 Tela inicial
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- Identidade visual da pizzaria;
+- Acesso ao cardápio;
+- Categorias de produtos;
+- Seção de produtos mais pedidos.
 
-### Other setup steps
+### 📋 Cardápio
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+Categorias inicialmente planejadas:
 
-## Learn more
+- 🍕 Pizzas
+- 🥟 Esfihas
+- 🥤 Bebidas
+- 🍫 Sobremesas
 
-To learn more about developing your project with Expo, look at the following resources:
+### 🍕 Pizzas Grandes
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Atualmente é possível:
 
-## Join the community
+- Visualizar os sabores disponíveis;
+- Selecionar sabores;
+- Selecionar no mínimo 1 e no máximo 2 sabores;
+- Desmarcar sabores;
+- Identificar visualmente os sabores selecionados;
+- Visualizar o preço de cada sabor;
+- Calcular automaticamente o preço da pizza.
 
-Join our community of developers creating universal apps.
+#### Regra atual de preço
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Quando uma pizza possui dois sabores, o preço utilizado é o do sabor de maior valor.
+
+Exemplo:
+
+| Sabores | Preço |
+|---|---:|
+| Calabresa | R$ 45,00 |
+| Frango com Catupiry | R$ 45,00 |
+| Portuguesa | R$ 48,00 |
+| Calabresa + Frango | R$ 45,00 |
+| Calabresa + Portuguesa | R$ 48,00 |
+| Frango + Portuguesa | R$ 48,00 |
+
+Essa regra poderá ser alterada posteriormente conforme as necessidades do projeto.
+
+---
+
+## 🚧 Funcionalidades em desenvolvimento
+
+### 🛒 Carrinho
+
+- Adicionar produtos;
+- Alterar quantidade;
+- Remover produtos;
+- Visualizar subtotal;
+- Visualizar total;
+- Adicionar observações.
+
+### 📦 Finalização do pedido
+
+- Identificação do cliente;
+- Endereço de entrega;
+- Forma de pagamento;
+- Confirmação do pedido;
+- Número do pedido;
+- Acompanhamento do status.
+
+### 👤 Usuário
+
+- Cadastro;
+- Login;
+- Perfil;
+- Endereços salvos;
+- Histórico de pedidos;
+- Detalhes dos pedidos.
+
+### 👨‍💼 Área administrativa
+
+- Login de administrador;
+- Visualização dos pedidos;
+- Alteração do status dos pedidos;
+- Cadastro de produtos;
+- Edição de produtos;
+- Remoção de produtos;
+- Gerenciamento de categorias;
+- Alteração de preços;
+- Estatísticas básicas.
+
+---
+
+## 🧱 Programação Orientada a Objetos
+
+O projeto será estruturado utilizando conceitos de POO.
+
+Algumas das principais entidades planejadas são:
+
+```text
+Usuario
+├── Cliente
+└── Administrador
+
+Produto
+├── Pizza
+├── Esfiha
+└── Bebida
+
+Sabor
+Categoria
+
+Pedido
+└── ItemPedido
+
+Endereco
+Pagamento
