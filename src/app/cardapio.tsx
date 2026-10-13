@@ -16,9 +16,9 @@ export default function CardapioScreen() {
 
         <View style={styles.categories}>
           <TouchableOpacity
-  style={styles.category}
-  onPress={() => router.push('/pizzas')}
->
+            style={styles.category}
+            onPress={() => router.push('/pizzas')}
+          >
             <Text style={styles.icon}>🍕</Text>
             <Text style={styles.categoryTitle}>Pizzas</Text>
             <Text style={styles.categoryDescription}>
@@ -26,7 +26,10 @@ export default function CardapioScreen() {
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.category}>
+          <TouchableOpacity
+            style={styles.category}
+            onPress={() => router.push('/esfihas')}
+          >
             <Text style={styles.icon}>🥟</Text>
             <Text style={styles.categoryTitle}>Esfihas</Text>
             <Text style={styles.categoryDescription}>
@@ -34,7 +37,10 @@ export default function CardapioScreen() {
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.category}>
+          <TouchableOpacity
+            style={styles.category}
+            onPress={() => router.push('/bebidas')}
+          >
             <Text style={styles.icon}>🥤</Text>
             <Text style={styles.categoryTitle}>Bebidas</Text>
             <Text style={styles.categoryDescription}>
@@ -42,7 +48,10 @@ export default function CardapioScreen() {
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.category}>
+          <TouchableOpacity
+            style={styles.category}
+            onPress={() => router.push('/sobremesas')}
+          >
             <Text style={styles.icon}>🍫</Text>
             <Text style={styles.categoryTitle}>Sobremesas</Text>
             <Text style={styles.categoryDescription}>
