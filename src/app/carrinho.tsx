@@ -123,12 +123,7 @@ export default function CarrinhoScreen() {
 
             <TouchableOpacity
               style={styles.primaryButton}
-              onPress={() =>
-                Alert.alert(
-                  'Carrinho pronto',
-                  'O carrinho está funcionando. A finalização do pedido será implementada depois.'
-                )
-              }
+              onPress={() => router.push('/finalizar-pedido')}
             >
               <Text style={styles.primaryButtonText}>Continuar pedido</Text>
             </TouchableOpacity>
